@@ -19,6 +19,7 @@ Donde: = : Representa a la conectiva binaria Doble Implicaci�n o Bicondicional
 Donde: p,q,r,s : Representan los s�mbolos de proposici�n
 
 Ejemplos de Formulas validas:
+
 1)   ((p&q)|(*r=s)-(**p&*q))
 2)   p&q|*r=s-**p&*q
 3)   ((*p|(q&*r))-((*q&p)-r))
@@ -32,6 +33,7 @@ Ingenier�a de Sistemas
 #include <cstring>
 #include <fstream>
 using namespace std;
+/*Optimize Branch*/ 
 //**************************************************************************
 class nodo
 {
