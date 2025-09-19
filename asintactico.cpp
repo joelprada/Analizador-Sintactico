@@ -1,22 +1,22 @@
-/*Analizador sintáctico de Formulas proposicionales
-La sintaxis de la lógica proposicional se especifica mediante un alfabeto
-Y un conjunto de reglas de formación.
+/*Analizador sintï¿½ctico de Formulas proposicionales
+La sintaxis de la lï¿½gica proposicional se especifica mediante un alfabeto
+Y un conjunto de reglas de formaciï¿½n.
 Programa en C++ Orientado a objetos, construido bajo plataforma Linux.
-Algoritmo basado en el análisis de la transición de estados de un Autómata.
+Algoritmo basado en el anï¿½lisis de la transiciï¿½n de estados de un Autï¿½mata.
 Lee una cadena "Formula" y luego la almacena en una TDA lista enlazada. 
 Posteriormente analiza si la formula esta bien formada o no. Para ello 
-Se basa en análisis de la transición de estados del autómata adjunto
+Se basa en anï¿½lisis de la transiciï¿½n de estados del autï¿½mata adjunto
 Para ejecutar use ./asintactico.bin en una consola de comandos
 
 
 Alfabeto z={(*,&,|,-,=),(p,q,r,s),'(',')'}
 
-Donde: * : Representa a la conectiva Unaria Negación 
+Donde: * : Representa a la conectiva Unaria Negaciï¿½n 
 Donde: & : Representa a la conectiva binaria AND
 Donde: | : Representa a la conectiva binaria OR
-Donde: - : Representa a la conectiva binaria Implicación o Condicional
-Donde: = : Representa a la conectiva binaria Doble Implicación o Bicondicional
-Donde: p,q,r,s : Representan los símbolos de proposición
+Donde: - : Representa a la conectiva binaria Implicaciï¿½n o Condicional
+Donde: = : Representa a la conectiva binaria Doble Implicaciï¿½n o Bicondicional
+Donde: p,q,r,s : Representan los sï¿½mbolos de proposiciï¿½n
 
 Ejemplos de Formulas validas:
 1)   ((p&q)|(*r=s)-(**p&*q))
@@ -25,7 +25,8 @@ Ejemplos de Formulas validas:
 
 Por: Joel Martin Prada Garcia
 joel.prada@gmail.com
-Ingeniería de Sistemas - U.F.P.S
+Ingenierï¿½a de Sistemas - U.F.P.S
+Rama Mater
 */
 
 #include <iostream>
@@ -59,7 +60,7 @@ public:
   void Ultimo() { Primero(); if(!ListaVacia()) while(actual->siguiente) Siguiente(); }
   bool Actual() { return actual != NULL; }
   int ValorActual() { return actual->valor; }
-  void AnalizarFormula(); //Función para analizar la validez de la formula
+  void AnalizarFormula(); //Funciï¿½n para analizar la validez de la formula
 
 private:
   pnodo primero;
@@ -91,11 +92,11 @@ void lista::Insertar(char v)
 	}
 }
 /* *************************************************************************
-Nota: Después de encontrar el primer error, los siguientes pueden ser inexactos 
-porque el autómata continua su recorrido aceptando un caracter en un 
-estado donde no debía, no realizando la respectiva transición hacia otro
-estado sino hasta el siguiente ciclo si aplica. En este instante se deberá
-abortar el análisis y dar como resultado que la formula esta mal formada pero
+Nota: Despuï¿½s de encontrar el primer error, los siguientes pueden ser inexactos 
+porque el autï¿½mata continua su recorrido aceptando un caracter en un 
+estado donde no debï¿½a, no realizando la respectiva transiciï¿½n hacia otro
+estado sino hasta el siguiente ciclo si aplica. En este instante se deberï¿½
+abortar el anï¿½lisis y dar como resultado que la formula esta mal formada pero
 se continua para seguir evaluando toda la formula.
 */
 void lista::AnalizarFormula()
