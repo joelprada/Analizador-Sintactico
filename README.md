@@ -13,7 +13,7 @@ Se basa en la simulación de un **autómata finito** que analiza la fórmula car
 
 El autómata utilizado para el análisis está representado en el siguiente diagrama:  
 
-![Autómata](Automata.png)  
+![Autómata](https://github.com/joelprada/Analizador-Sintactico/blob/master/Automata-Asin.png)  
 
 Cada estado representa un contexto válido en la fórmula, y las transiciones dependen del carácter leído.
 
