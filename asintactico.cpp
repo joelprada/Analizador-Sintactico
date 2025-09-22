@@ -24,9 +24,8 @@ Ejemplos de Formulas validas:
 2)   p&q|*r=s-**p&*q
 3)   ((*p|(q&*r))-((*q&p)-r))
 
-Por: Joel Martin Prada Garcia
+Por: Joel M. Prada 
 joel.prada@gmail.com
-Ingenier�a de Sistemas
 */
 
 #include <iostream>
