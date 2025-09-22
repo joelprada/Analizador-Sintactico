@@ -62,7 +62,6 @@ El programa se organiza en:
 ```cpp
 /*  
 Analizador sintáctico de fórmulas proposicionales
-Autor: Joel M. Prada.
 
 Este programa:
 1. Lee una fórmula lógica proposicional.
